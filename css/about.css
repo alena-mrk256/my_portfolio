@@ -1,0 +1,104 @@
+/* Сучасна стилізація для сторінки About */
+body.about {
+  background: #f0f2f5; /* світлий нейтральний фон */
+  margin: 0;
+  font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+  color: #2c3e50;
+  line-height: 1.6;
+}
+
+/* Контейнер */
+.about-page {
+  background: #ffffff;
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 50px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Заголовки */
+.about-page h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1a73e8; /* акцентний колір */
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.about-page h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  border-left: 4px solid #1a73e8;
+  padding-left: 10px;
+}
+
+/* Посилання */
+.about-page a {
+  color: #1a73e8;
+  text-decoration: none;
+  font-weight: 500;
+}
+.about-page a:hover {
+  text-decoration: underline;
+}
+
+/* Списки */
+.about-page ul {
+  list-style: none;
+  padding: 0;
+}
+.about-page ul li {
+  background: #f8f9fa;
+  margin: 10px 0;
+  padding: 12px 18px;
+  border-radius: 10px;
+  border-left: 4px solid #1a73e8;
+  transition: transform 0.2s, background 0.3s;
+}
+.about-page ul li:hover {
+  background: #e9ecef;
+  transform: translateX(5px);
+}
+
+/* Анімація */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  .about-page {
+    padding: 25px;
+    margin: 20px;
+  }
+  .about-page h1 {
+    font-size: 1.8rem;
+  }
+}
+
+.about-title {
+  text-align: center;          /* по центру */
+  font-size: 2.4rem;           /* великий сучасний розмір */
+  font-weight: 700;            /* товстий шрифт */
+  color: #6c5ce7;              /* стильний фіолетовий */
+  margin: 40px 0 30px;         /* відступи */
+  text-transform: uppercase;   /* великі літери */
+  letter-spacing: 2px;         /* відстань між літерами */
+  position: relative;          /* для декоративної лінії */
+}
+
+/* Декоративна лінія під заголовком */
+.about-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #a29bfe;
+  margin: 12px auto 0; /* по центру */
+  border-radius: 2px;
+}

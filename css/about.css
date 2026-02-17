@@ -1,104 +1,84 @@
-/* Сучасна стилізація для сторінки About */
 body.about {
-  background: #f0f2f5; /* світлий нейтральний фон */
+  font-family: 'Montserrat', sans-serif;
+  background: #f2f4f8;
   margin: 0;
-  font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+  padding: 40px 15px;
   color: #2c3e50;
-  line-height: 1.6;
 }
 
-/* Контейнер */
-.about-page {
-  background: #ffffff;
-  max-width: 1000px;
-  margin: 60px auto;
-  padding: 50px;
-  border-radius: 16px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-  animation: fadeIn 0.8s ease-in-out;
-}
 
-/* Заголовки */
-.about-page h1 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #1a73e8; /* акцентний колір */
+/* Заголовок сторінки */
+.page-title {
   text-align: center;
-  margin-bottom: 30px;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: 700;
 }
 
-.about-page h2 {
-  font-size: 1.6rem;
-  font-weight: 600;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  border-left: 4px solid #1a73e8;
-  padding-left: 10px;
+
+/* Картки */
+.card {
+  background: white;
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 35px;
+
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+  transition: 0.3s;
 }
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+
+/* Ліва колонка */
+.card-text {
+  flex: 1;
+}
+
+.card-text h2 {
+  margin-top: 0;
+}
+
 
 /* Посилання */
-.about-page a {
+.link {
+  display: inline-block;
+  margin: 8px 0 14px;
   color: #1a73e8;
+  font-weight: 600;
   text-decoration: none;
-  font-weight: 500;
 }
-.about-page a:hover {
+
+.link:hover {
   text-decoration: underline;
 }
 
-/* Списки */
-.about-page ul {
-  list-style: none;
-  padding: 0;
-}
-.about-page ul li {
-  background: #f8f9fa;
-  margin: 10px 0;
-  padding: 12px 18px;
-  border-radius: 10px;
-  border-left: 4px solid #1a73e8;
-  transition: transform 0.2s, background 0.3s;
-}
-.about-page ul li:hover {
-  background: #e9ecef;
-  transform: translateX(5px);
+
+/* Фото справа */
+.card img {
+  width: 280px;
+  border-radius: 12px;
+  object-fit: cover;
 }
 
-/* Анімація */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
 
 /* Адаптивність */
 @media (max-width: 768px) {
-  .about-page {
-    padding: 25px;
-    margin: 20px;
+  .card {
+    flex-direction: column;
+    text-align: center;
   }
-  .about-page h1 {
-    font-size: 1.8rem;
+
+  .card img {
+    width: 100%;
   }
-}
-
-.about-title {
-  text-align: center;          /* по центру */
-  font-size: 2.4rem;           /* великий сучасний розмір */
-  font-weight: 700;            /* товстий шрифт */
-  color: #6c5ce7;              /* стильний фіолетовий */
-  margin: 40px 0 30px;         /* відступи */
-  text-transform: uppercase;   /* великі літери */
-  letter-spacing: 2px;         /* відстань між літерами */
-  position: relative;          /* для декоративної лінії */
-}
-
-/* Декоративна лінія під заголовком */
-.about-title::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: #a29bfe;
-  margin: 12px auto 0; /* по центру */
-  border-radius: 2px;
 }

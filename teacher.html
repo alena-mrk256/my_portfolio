@@ -1,11 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>На допомогу вчителю</title>
+  <link rel="stylesheet" href="/css/teacher.css">
 </head>
 <body>
-    <a href="teacher.html" class="active">На допомогу вчителю</a>
+  <section class="teacher-help">
+    <h2>На допомогу вчителю</h2>
+
+    <!-- Вкладки -->
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="materials">Методичні матеріали 📚</button>
+      <button class="tab-btn" data-tab="templates">Шаблони 📝</button>
+      <button class="tab-btn" data-tab="resources">Інтерактивні ресурси 💻</button>
+    </div>
+
+    <!-- Контент вкладок -->
+    <div class="tab-content active" id="materials">
+      <div class="material-card">
+        <h3>Конспект уроку з інформатики</h3>
+        <p>Тема: Алгоритми та їх властивості. Практичні вправи для 7 класу.</p>
+        <a href="materials/lesson1.pdf" target="_blank" class="btn">Переглянути</a>
+      </div>
+      <div class="material-card">
+        <h3>Лабораторна робота з технологій</h3>
+        <p>Практичне завдання з обробки матеріалів та техніки безпеки.</p>
+        <a href="materials/lab1.pdf" target="_blank" class="btn">Переглянути</a>
+      </div>
+    </div>
+
+    <div class="tab-content" id="templates">
+      <div class="material-card">
+        <h3>Шаблон презентації</h3>
+        <p>Сучасний дизайн для уроків інформатики.</p>
+        <a href="templates/presentation.pptx" target="_blank" class="btn">Завантажити</a>
+      </div>
+      <div class="material-card">
+        <h3>Інструкція з GitHub</h3>
+        <p>Покрокове керівництво для учнів щодо роботи з репозиторіями.</p>
+        <a href="templates/github-guide.pdf" target="_blank" class="btn">Переглянути</a>
+      </div>
+    </div>
+
+    <div class="tab-content" id="resources">
+      <div class="material-card">
+        <h3>LearningApps</h3>
+        <p>Онлайн‑платформа для створення інтерактивних вправ.</p>
+        <a href="https://learningapps.org/" target="_blank" class="btn">Перейти</a>
+      </div>
+      <div class="material-card">
+        <h3>Scratch</h3>
+        <p>Середовище для навчання програмуванню дітей.</p>
+        <a href="https://scratch.mit.edu/" target="_blank" class="btn">Перейти</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Перемикання вкладок
+    const tabBtns = document.querySelectorAll(".tab-btn");
+    const tabContents = document.querySelectorAll(".tab-content");
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        tabBtns.forEach(b => b.classList.remove("active"));
+        tabContents.forEach(c => c.classList.remove("active"));
+
+        btn.classList.add("active");
+        document.getElementById(btn.dataset.tab).classList.add("active");
+      });
+    });
+  </script>
 </body>
 </html>
